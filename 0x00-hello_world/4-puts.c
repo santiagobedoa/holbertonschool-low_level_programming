@@ -2,7 +2,6 @@
 
 int main(void)
 {
-	char quote = "Programming is like building a multilingual puzzle\n";
-	puts(quote);
+	puts("Programming is like building a multilingual puzzle\n");
 	return 0;
 }
