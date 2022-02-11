@@ -9,6 +9,7 @@ int main(void)
 {
 	char a;
 	for (a = 'a'; a <= 'z'; ++a)
-		printf("%c\n", a);
-    	return (0);
+
+		printf("%c", a);
+	return (0);
 }
