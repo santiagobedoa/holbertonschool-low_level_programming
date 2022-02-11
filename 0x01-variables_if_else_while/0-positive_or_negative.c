@@ -19,7 +19,7 @@ int main(void)
 	    printf ("%lu is negative", n);
 	}
 	else {
-	    printf("%lu is positive", n)
+	    printf("%lu is positive", n);
 	}
 
 	return (0);
