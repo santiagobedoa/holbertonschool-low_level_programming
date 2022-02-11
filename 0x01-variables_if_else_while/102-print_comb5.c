@@ -22,11 +22,11 @@ int main(void)
 				{
 					if (a == 9 && b == 8 && c == 9 && d == 9)
 					{
-						printf("%d%d %d%d, ", a, b, c, d);
+						printf("%d%d %d%d", a, b, c, d);
 					}
 					else
 					{
-						printf("%d%d %d%d", a, b, c, d);
+						printf("%d%d %d%d, ", a, b, c, d);
 					}
 				}
 			}
