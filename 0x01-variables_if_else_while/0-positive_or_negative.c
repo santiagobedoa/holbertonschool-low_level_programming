@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
@@ -16,10 +17,10 @@ int main(void)
 	/* your code goes there */
 	if (n < 0)
 	{
-	    printf ("%lu is negative", n);
+	    printf ("%u is negative\n", n);
 	}
 	else {
-	    printf("%lu is positive", n);
+	    printf("%u is positive\n", n);
 	}
 
 	return (0);
