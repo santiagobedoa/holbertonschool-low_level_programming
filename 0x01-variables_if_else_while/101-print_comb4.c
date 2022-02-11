@@ -18,14 +18,14 @@ int main(void)
 			for (c = b + 1; c <= 9; c++)
 			{
 				if (a == 7 && b == 8 && c == 9)
-                		{
-                    			printf("%d%d%d", a, b, c);
-                		}
-                		else
-                		{
-                    			printf("%d%d%d, ", a, b, c);
-                		}
-		    	}
+				{
+					printf("%d%d%d", a, b, c);
+				}
+				else
+				{
+					printf("%d%d%d, ", a, b, c);
+				}
+			}
 		}
 	}
 	putchar('\n');
