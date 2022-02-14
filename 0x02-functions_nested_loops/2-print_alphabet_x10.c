@@ -2,10 +2,18 @@
 
 /**
  * main - init
- * Return: void
+ * Return: 0
  */
 
-void main(void)
+void print_alphabet_x10(void);
+
+int main(void)
+{
+	print_alphabet_x10();
+	return (0);
+}
+
+void print_alphabet_x10(void)
 {
 	char a;
 	int counter;
@@ -19,4 +27,3 @@ void main(void)
 		putchar('\n');
 	}
 }
-
