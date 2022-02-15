@@ -1,8 +1,3 @@
-/**
- * File: 3-islower.c
- * Auth: Santiago
- */
-
 #include "main.h"
 
 /**
