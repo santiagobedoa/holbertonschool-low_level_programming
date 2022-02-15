@@ -1,7 +1,8 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - init
+ * print_last_digit - print the last digit of ant integer
+ * @n: integer to be processed
  * Return: las digit of a number
  */
 
