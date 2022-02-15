@@ -12,21 +12,33 @@ void print_times_table(int n)
 	int b;
 	int c;
 
-	for (a = 0; a <= n; a++)
+	if (n <= 0 || n > 15)
 	{
-		putchar('0');
-		for (b = 1; b <= n; b++)
+		printf("");
+	}
+	else
+	{
+		for (a = 0; a <= n; a++)
 		{
-			putchar(',');
-			putchar(' ');
-			c = a * b;
-			if (c <= 9)
+			putchar('0');
+			for (b = 1; b <= n; b++)
 			{
+				putchar(',');
 				putchar(' ');
+				c = a * b;
+				if (c <= 9)
+				{
+					putchar(' ');
+					putchar(' ');
+				}
+				else if (c <= 99)
+				{
+					putchar(' ');
+				}
+				printf("%d", c);
 			}
-			printf("%d", c);
+			putchar('\n');
 		}
-		putchar('\n');
 	}
 }
 
