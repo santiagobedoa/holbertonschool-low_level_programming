@@ -22,11 +22,11 @@ void times_table(void)
 			}
 			else if (c <= 9)
 			{
-				printf("  %d,", c)
+				printf("  %d,", c);
 			}
 			else
 			{
-				printf(" %d,", c)
+				printf(" %d,", c);
 			}
 		}
 		putchar('\n');
