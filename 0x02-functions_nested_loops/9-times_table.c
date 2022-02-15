@@ -22,7 +22,7 @@ void times_table(void)
 			}
 			else if (b == 9)
 			{
-				pritnf(" %d", c);
+				printf(" %d", c);
 			}
 			else if (c <= 9)
 			{
