@@ -1,7 +1,13 @@
+/**
+ * File: 3-islower.c
+ * Auth: Santiago
+ */
+
 #include "main.h"
 
 /**
- * _islower - c is a latter
+ * _islower - checks if a charcacter is lower case
+ * @c: the character to be checked
  * Return: 1 if c is lower case, 0 otherwise
  */
 
