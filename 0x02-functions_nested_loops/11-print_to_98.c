@@ -1,28 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - init
+ * print_to_98 - prints al natural numbers from a to 98.
+ * @a: limit
  * Return: 0
  */
 
-void print_to_98(int);
-
-int main(void)
-{
-	print_to_98(0);
-	print_to_98(125);
-	return (0);
-}
-
 void print_to_98(int a)
 {
-	if (a < 98) {
-		while (a <= 98) {
+	if (a < 98)
+	{
+		while (a <= 98)
+		{
 			printf("%d, ", a);
 			a++;
 		}
-	} else if (a > 98) {
-		while (a >= 98) {
+	}
+	else if (a > 98)
+	{
+		while (a >= 98)
+		{
 			printf("%d, ", a);
 			a--;
 		}
