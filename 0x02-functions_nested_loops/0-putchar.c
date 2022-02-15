@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - init
@@ -7,7 +7,15 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char a[] = "_putchar";
+	int counter;
+
+	while (a[counter] != '\0')
+	{
+		_putchar(a[counter]);
+		counter++;
+	}
+	_putchar('\n');
 	return (0);
 }
 
