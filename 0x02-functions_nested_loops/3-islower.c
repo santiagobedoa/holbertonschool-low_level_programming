@@ -1,17 +1,15 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.c"
 
 /**
- * main - init
- * Return: 1 if true, 0 otherwise
+ * _islower - init
+ * Return: 1 if c is lower case, 0 otherwise
  */
 
 int _islower(int c)
 {
-	if (islower(c)) {
+	if ('a' <= c <= 'z') {
 		return (1);
-	}
-	else {
+	} else {
 		return (0);
 	}
 }
