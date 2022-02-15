@@ -5,7 +5,7 @@
  * Return: int
  */
 
-int main(void)
+void main(void)
 {
 	int weighted_sum;
 	int counter;
