@@ -1,17 +1,9 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - init
+ * jack_bauer - prints every minute of a day
  * Return: 0
  */
-
-void jack_bauer(void);
-
-int main (void)
-{
-	jack_bauer();
-	return (0);
-}
 
 void jack_bauer(void)
 {
