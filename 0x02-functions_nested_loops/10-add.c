@@ -1,24 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - init
- * Return: 0
+ * add - add two numbers
+ * @a: number that will be added
+ * @b: number that will be added
+ * Return: result of the operation
  */
-
-int add(int, int);
-
-int main(void)
-{
-	int n;
-
-	n = add(89, 9);
-	printf("%d", n);
-	return (0);
-}
 
 int add(int a, int b)
 {
-	int c = a +b;
+	int c = a + b;
 	return (c);
 }
 
