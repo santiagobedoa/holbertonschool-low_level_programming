@@ -2,10 +2,10 @@
 
 /**
  * main - init
- * Return: int
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int weighted_sum;
 	int counter;
@@ -19,5 +19,6 @@ void main(void)
 	}
 	printf("%d", weighted_sum);
 	putchar('\n');
+	return (0);
 }
 
