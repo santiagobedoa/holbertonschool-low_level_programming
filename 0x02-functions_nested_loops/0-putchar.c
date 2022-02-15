@@ -7,12 +7,12 @@
 
 int main(void)
 {
-	char a[] = "_putchar";
-	int counter;
+	char _string[] = "_putchar";
+	int counter = 0;
 
-	while (a[counter] != '\0')
+	while (_string[counter] != '\0')
 	{
-		_putchar(a[counter]);
+		_putchar(_string[counter]);
 		counter++;
 	}
 	_putchar('\n');
