@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - init
@@ -10,7 +11,7 @@ int main(void)
 	long num1 = 0;
 	long num2 = 1;
 	long r;
-	unsigned long sum = 0;
+	long sum = 0;
 
 	while (r <= 4000000)
 	{
