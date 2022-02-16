@@ -17,7 +17,7 @@ int main(void)
 	{
 		if ((r % 2) == 0)
 		{
-			sum = sum + r;
+			sum += r;
 		}
 		r = num1 + num2;
 		num1 = num2;
