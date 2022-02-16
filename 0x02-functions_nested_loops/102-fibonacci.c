@@ -16,20 +16,20 @@ int main(void)
 	{
 		if (counter == 49)
 		{
-			printf("%d", r);
+			printf("%ld", r);
 			break;
 		}
 		else if (num1 == 1 && num2 == 2)
 		{
-			printf("%d, ", num1);
-			printf("%d, ", num2);
+			printf("%ld, ", num1);
+			printf("%ld, ", num2);
 			r = num1 + num2;
 			num1 = num2;
 			num2 = r;
 		}
 		else
 		{
-			printf("%d, ", r);
+			printf("%ld, ", r);
 			r = num1 + num2;
 			num1 = num2;
 			num2 = r;
