@@ -19,10 +19,18 @@ int main(void)
 			printf("%d", r);
 			break;
 		}
+		else if (num1 == 1 && num2 == 2)
+		{
+			printf("%d, ", num1);
+			printf("%d, ", num2);
+			r = num1 + num2;
+			num1 = num2
+			num2 = r
+		}
 		else
 		{
-			r = num1 + num2;
 			printf("%d, ", r);
+			r = num1 + num2;
 			num1 = num2;
 			num2 = r;
 		}
