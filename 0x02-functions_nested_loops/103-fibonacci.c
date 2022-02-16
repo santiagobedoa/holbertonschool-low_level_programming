@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define n 4000000
 
 /**
  * main - init
