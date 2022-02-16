@@ -10,19 +10,19 @@ int main(void)
 	long num1 = 0;
 	long num2 = 1;
 	long r;
-	long weighted_sum = 0;
+	long sum = 0;
 
 	while (r <= 4000000)
 	{
+		if ((r % 2) == 0)
+		{
+			sum = sum + r;
+		}
 		r = num1 + num2;
 		num1 = num2;
 		num2 = r;
-		if ((r % 2) == 0)
-		{
-			weighted_sum = weighted_sum + r;
-		}
 	}
-	printf("%ld", weighted_sum);
+	printf("%ld", sum);
 	putchar('\n');
 	return (0);
 }
