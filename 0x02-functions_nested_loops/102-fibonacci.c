@@ -24,8 +24,8 @@ int main(void)
 			printf("%d, ", num1);
 			printf("%d, ", num2);
 			r = num1 + num2;
-			num1 = num2
-			num2 = r
+			num1 = num2;
+			num2 = r;
 		}
 		else
 		{
