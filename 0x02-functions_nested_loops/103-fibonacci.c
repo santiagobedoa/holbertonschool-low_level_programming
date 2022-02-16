@@ -9,20 +9,18 @@
 
 int main(void)
 {
-	unsigned long num1 = 0;
+	unsigned long num1 = 1;
 	unsigned long num2 = 1;
-	unsigned long r;
 	unsigned long sum = 0;
 
-	while (r <= n)
+	while (num1 <= n)
 	{
-		if ((r % 2) == 0)
+		if ((num1 % 2) == 0)
 		{
-			sum += r;
+			sum += num1;
 		}
-		r = num1 + num2;
-		num1 = num2;
-		num2 = r;
+		num1 = num1 + num2;
+		num2 = num1 - num2;
 	}
 	printf("%lu", sum);
 	putchar('\n');
