@@ -22,7 +22,7 @@ int main(void)
 			weighted_sum = weighted_sum + r;
 		}
 	}
-	printf("%lld", weighted_sum);
+	printf("%ld", weighted_sum);
 	putchar('\n');
 }
 
