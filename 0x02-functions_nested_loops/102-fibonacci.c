@@ -27,5 +27,7 @@ int main(void)
 			num2 = r;
 		}
 	}
+	putchar('\n');
+	return (0);
 }
 
