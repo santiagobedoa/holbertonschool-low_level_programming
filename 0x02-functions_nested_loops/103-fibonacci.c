@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	long num1 = 0;
-	long num2 = 1;
-	long r;
-	long sum = 0;
+	unsigned long num1 = 0;
+	unsigned long num2 = 1;
+	unsigned long r;
+	unsigned long sum = 0;
 
 	while (r <= 4000000)
 	{
@@ -23,8 +23,8 @@ int main(void)
 		num1 = num2;
 		num2 = r;
 	}
-	printf("%ld", sum);
+	printf("%lu", sum);
 	putchar('\n');
-	return (sum);
+	return (0);
 }
 
