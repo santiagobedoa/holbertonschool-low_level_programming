@@ -10,7 +10,7 @@ int main(void)
 	long num1 = 0;
 	long num2 = 1;
 	long r;
-	long sum = 0;
+	unsigned long sum = 0;
 
 	while (r <= 4000000)
 	{
