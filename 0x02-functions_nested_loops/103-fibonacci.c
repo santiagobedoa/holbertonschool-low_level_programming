@@ -24,5 +24,6 @@ int main(void)
 	}
 	printf("%ld", weighted_sum);
 	putchar('\n');
+	return (0);
 }
 
