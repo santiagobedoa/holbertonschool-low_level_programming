@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	int num1 = 1;
-	int num2 = 2;
-	int r;
+	long num1 = 1;
+	long num2 = 2;
+	long r;
 	int counter;
 
 	for (counter = 0; counter <= 49; counter++)
