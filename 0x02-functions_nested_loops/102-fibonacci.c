@@ -12,7 +12,7 @@ int main(void)
 	long r;
 	int counter;
 
-	for (counter = 0; counter <= 49; counter++)
+	for (counter = 0; counter <= 48; counter++)
 	{
 		if (counter == 49)
 		{
