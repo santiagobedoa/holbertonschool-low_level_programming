@@ -14,7 +14,7 @@ int main(void)
 	unsigned long r;
 	unsigned long sum = 0;
 
-	while (r <= 4000000)
+	while (r <= n)
 	{
 		if ((r % 2) == 0)
 		{
