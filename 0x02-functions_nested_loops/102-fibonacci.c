@@ -14,7 +14,7 @@ int main(void)
 
 	for (counter = 0; counter <= 48; counter++)
 	{
-		if (counter == 49)
+		if (counter == 48)
 		{
 			printf("%ld", r);
 			break;
