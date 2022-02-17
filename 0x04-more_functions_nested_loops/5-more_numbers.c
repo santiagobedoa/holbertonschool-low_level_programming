@@ -8,21 +8,22 @@
 
 void more_numbers(void)
 {
-	char a;
-	char b;
-	char c;
-	char d;
+	char a, b, c, d;
 
 	for (a = 0; a < 10; a++)
 	{
 		for (b = 0; b <= 14; b++)
 		{
 			if (b <= 9)
+			{
 				c = b;
+			}
 			else
+			{
 				c = b % 10;
 				d = b / 10;
 				putchar(d + '0');
+			}
 			putchar(c + '0');
 		}
 		putchar('\n');
