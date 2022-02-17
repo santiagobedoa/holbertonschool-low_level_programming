@@ -21,7 +21,7 @@ void print_triangle(int size)
 		spaces = size - rows;
 		while (spaces > 0)
 		{
-			putchar('-');
+			putchar(' ');
 			spaces--;
 		}
 		hash = rows;
