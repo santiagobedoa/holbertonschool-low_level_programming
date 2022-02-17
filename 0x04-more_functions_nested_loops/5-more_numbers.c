@@ -18,18 +18,14 @@ void more_numbers(void)
 		for (b = 0; b <= 14; b++)
 		{
 			if (b <= 9)
-			{
 				c = b;
-			}
 			else
-			{
 				c = b % 10;
 				d = b / 10;
-				_putchar(d + '0');
-			}
-			_putchar(c + '0');
+				putchar(d + '0');
+			putchar(c + '0');
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 }
 
