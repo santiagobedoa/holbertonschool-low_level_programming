@@ -3,6 +3,7 @@
 /**
  * print_line - draws a straight line
  * @n: number of line that will be printed
+ * Return: void
  */
 
 void print_line(int n)
@@ -11,10 +12,10 @@ void print_line(int n)
 	{
 		while (n != 0)
 		{
-			_putchar('-');
+			putchar('-');
 			n--;
 		}
 	}
-	_putchar('\n');
+	putchar('\n');
 }
 
