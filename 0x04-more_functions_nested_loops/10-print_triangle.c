@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * print_triangle - print a triangle
+ * print_triangle - a function that prints a triangle
  * @size: size of the triangle
- * Return: 0
+ * Return: triangle made of '#'
  */
-
 void print_triangle(int size)
 {
 	int spaces, hash, rows;
@@ -31,4 +30,3 @@ void print_triangle(int size)
 		_putchar('\n');
 	}
 }
-
