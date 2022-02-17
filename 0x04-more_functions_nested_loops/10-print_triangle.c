@@ -7,9 +7,7 @@
  */
 void print_triangle(int size)
 {
-	int spaces;
-	int hash;
-	int rows;
+	int spaces, hash, rows;
 
 	if (size == 0)
 	{
