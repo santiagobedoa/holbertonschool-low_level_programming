@@ -3,6 +3,7 @@
 /**
  * print_square - prints a square
  * @size: size of the square
+ * Return: void
  */
 
 void print_square(int size)
@@ -16,14 +17,14 @@ void print_square(int size)
 		{
 			for (width; width > 0; width--)
 			{
-				putchar('#');
+				_putchar('#');
 			}
-			putchar('\n');
+			_putchar('\n');
 			width = size;
 		}
 	}
 	else
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 }
