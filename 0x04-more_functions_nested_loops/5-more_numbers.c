@@ -25,10 +25,11 @@ void more_numbers(void)
 			{
 				c = b % 10;
 				d = b / 10;
-				putchar(d + '0');
+				_putchar(d + '0');
 			}
-			putchar(c + '0');
+			_putchar(c + '0');
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
+
