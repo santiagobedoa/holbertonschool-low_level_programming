@@ -3,30 +3,29 @@
 /**
  * print_triangle - a function that prints a triangle
  * @size: size of the triangle
- * Return: triangle made of '#'
+ * Return: triangle of '#'
  */
 void print_triangle(int size)
 {
-	int spaces, hash, rows;
+	int rows, spaces, hash;
 
-	if (size == 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
-	for (rows = 1; rows <= size; rows++)
+	else
 	{
-		spaces = size - rows;
-		while (spaces > 0)
+		for (rows = 0; rows <= (size - 1); rows++)
 		{
-			_putchar(' ');
-			spaces--;
+			for (spaces = 0; spaces < (size - 1) - rows; spaces++)
+			{
+				_putchar(' ');
+			}
+			for (hash = 0; hash <= rows; hash++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-		hash = rows;
-		while (hash > 0)
-		{
-			_putchar('#');
-			hash--;
-		}
-		_putchar('\n');
 	}
 }
