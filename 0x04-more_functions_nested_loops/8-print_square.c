@@ -4,7 +4,6 @@
  * print_square - prints a square
  * @size: size of the square
  */
-
 void print_square(int size)
 {
 	int height = size;
@@ -27,4 +26,3 @@ void print_square(int size)
 		putchar('\n');
 	}
 }
-
