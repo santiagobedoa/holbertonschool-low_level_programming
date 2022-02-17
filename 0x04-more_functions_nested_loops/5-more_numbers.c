@@ -10,6 +10,8 @@ void more_numbers(void)
 {
 	char a;
 	char b;
+	char c;
+	char d;
 
 	for (a = 0; a < 10; a++)
 	{
@@ -17,16 +19,17 @@ void more_numbers(void)
 		{
 			if (b <= 9)
 			{
-				putchar(b + '0');
+				c = b; 
 			}
 			else
 			{
-				putchar((b / 10) + '0');
-				putchar((b % 10) + '0');
+				c = b % 10;
+				d = b / 10;
+				putchar(d + '0');
 			}
+			putchar(c + '0');
 		}
 		putchar('\n');
 	}
-	putchar('\n');
 }
 
