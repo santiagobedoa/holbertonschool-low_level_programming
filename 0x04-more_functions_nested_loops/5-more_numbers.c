@@ -19,7 +19,7 @@ void more_numbers(void)
 		{
 			if (b <= 9)
 			{
-				c = b; 
+				c = b;
 			}
 			else
 			{
