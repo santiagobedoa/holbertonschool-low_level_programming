@@ -5,7 +5,6 @@
  * @size: size of the triangle
  * Return: void
  */
-
 void print_triangle(int size)
 {
 	int spaces;
@@ -33,4 +32,3 @@ void print_triangle(int size)
 		_putchar('\n');
 	}
 }
-
