@@ -12,13 +12,14 @@ void print_square(int size)
 
 	if (size != 0)
 	{
-		for (height; height <= 0; height--)
+		for (height; height > 0; height--)
 		{
-			for (width; width <= 0; width--)
+			for (width; width > 0; width--)
 			{
 				putchar('#');
 			}
 			putchar('\n');
+			width = size;
 		}
 	}
 	else
