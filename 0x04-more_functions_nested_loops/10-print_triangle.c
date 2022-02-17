@@ -14,23 +14,23 @@ void print_triangle(int size)
 
 	if (size == 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 	for (rows = 1; rows <= size; rows++)
 	{
 		spaces = size - rows;
 		while (spaces > 0)
 		{
-			putchar(' ');
+			_putchar(' ');
 			spaces--;
 		}
 		hash = rows;
 		while (hash > 0)
 		{
-			putchar('#');
+			_putchar('#');
 			hash--;
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
 
