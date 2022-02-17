@@ -3,8 +3,9 @@
 /**
  * print_triangle - print a triangle
  * @size: size of the triangle
- * Return: void
+ * Return: 0
  */
+
 void print_triangle(int size)
 {
 	int spaces, hash, rows;
