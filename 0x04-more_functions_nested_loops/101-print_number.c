@@ -8,17 +8,17 @@
 
 void print_number(int n)
 {
-	long n = n;
+	long long num = n;
 
-	if (n < 0)
+	if (num < 0)
 	{
 		putchar('-');
-		n = -n;
+		num = -n;
 	}
-	if (n / 10)
+	if (num / 10)
 	{
-		print_number(n / 10);
+		print_number(num / 10);
 	}
-	putchar((n % 10) + '0');
+	putchar((num % 10) + '0');
 }
 
