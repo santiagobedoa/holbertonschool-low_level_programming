@@ -8,16 +8,22 @@
 int main(void)
 {
 	long n = 612852475143;
-	long i, r;
+	long i = 2;
 
-	for (i = 0; i < n; i++)
+	while (i < (n / 2))
 	{
 		if (n % i == 0)
 		{
-			r = n / i;
+			n = n / i;
+			i = 2;
 		}
+		else
+		{
+			i++;
+		}
+
 	}
-	printf("%lu\n", r);
+	printf("%lu\n", n);
 	return (0);
 }
 
