@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts_half - prins left half of a string
@@ -10,10 +11,11 @@ void puts_half(char *str)
 {
 	int half;
 	int i = 0;
+	int size = strlen(str);
 
-	if (sizeof(str) % 2 == 0)
+	if (size % 2 == 0)
 	{
-		half = sizeof(str) / 2;
+		half = size / 2;
 		while (str[i] != '\0')
 		{
 			if (i > half)
@@ -25,7 +27,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		half = (sizeof(str) - 1) / 2;
+		half = (size - 1) / 2;
 		while (str[i] != '\0')
 		{
 			if (i > half)
