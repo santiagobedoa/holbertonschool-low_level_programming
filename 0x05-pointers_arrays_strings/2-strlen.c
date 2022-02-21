@@ -6,7 +6,7 @@
  * Return: lenght of s
  */
 
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	return (sizeof(s));
 }
