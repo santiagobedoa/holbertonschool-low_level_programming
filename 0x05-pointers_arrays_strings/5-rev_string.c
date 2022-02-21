@@ -21,6 +21,6 @@ void rev_string(char *s)
 		*(reversed + i) = s[len];
 		i++;
 	}
-	*s = reversed;
+	s = reversed;
 }
 
