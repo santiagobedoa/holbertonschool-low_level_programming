@@ -17,6 +17,7 @@ void rev_string(char *s)
 		*(original + len) = s[len];
 		len++;
 	}
+	printf("%s", original);
 	for (; len >= 0; len--)
 	{
 		*(s + i) = original[len];
@@ -24,3 +25,12 @@ void rev_string(char *s)
 	}
 }
 
+int main(void)
+{
+    char s[10] = "My School";
+
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
+}
