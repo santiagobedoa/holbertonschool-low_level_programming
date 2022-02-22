@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _atoi - convert str to int
@@ -8,26 +9,27 @@
 
 int _atoi(char *s)
 {
+	int len_str = strlen(s);
 	int i = 0;
-	int sign = 1;
-	int r = 0;
+	int sign = 0;
+	int res = 0;
 
-	while (s[i] == ' ')
+	while (i <= len_str)
 	{
-		i++;
-	}
-	if (s[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		for (; s[i] != 0; i++)
+		if (s[i] == '-');
 		{
-			r = r * 10 + s[i] - '0';
+			sign++;
 		}
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			res = (res * 10) + (s[i] - '0');
+		}
+		i++;
 	}
-	return sign * r;
+	if (sign % 2 == 0)
+	{
+		res = -res;
+	}
+	return res
 }
 
