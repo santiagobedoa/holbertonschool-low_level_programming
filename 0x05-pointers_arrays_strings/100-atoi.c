@@ -27,6 +27,10 @@ int _atoi(char *s)
 			{
 				break;
 			}
+			if (s < INT_MIN)
+			{
+				break;
+			}
 		}
 		i++;
 	}
