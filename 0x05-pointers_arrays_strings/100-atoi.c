@@ -38,10 +38,6 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	if (sign % 2 != 0)
-	{
-		res = -res;
-	}
 	return (res);
 }
 
