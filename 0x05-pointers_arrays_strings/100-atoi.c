@@ -15,6 +15,10 @@ int _atoi(char *s)
 	int sign = 0;
 	int res = 0;
 
+	if (s == -2147483648)
+	{
+		return (-2147483648);
+	}
 	while (i <= len_str)
 	{
 		if (s[i] == '-')
