@@ -19,7 +19,7 @@ char *_strcpy(char dest, char src)
 	while (j <= i)
 	{
 		dest[j] = src[j];
-		u++;
+		j++;
 	}
 	return (dest)
 }
