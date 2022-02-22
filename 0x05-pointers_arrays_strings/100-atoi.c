@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string.h>
-#include <stdint.h>
 
 /**
  * _atoi - convert str to int
@@ -14,6 +13,7 @@ int _atoi(char *s)
 	int i = 0;
 	int sign = 0;
 	int res = 0;
+	INT_MIN = -214748364
 
 	while (i <= len_str)
 	{
