@@ -16,7 +16,7 @@ int _atoi(char *s)
 
 	while (i <= len_str)
 	{
-		if (s[i] == '-');
+		if (s[i] == '-')
 		{
 			sign++;
 		}
@@ -30,6 +30,6 @@ int _atoi(char *s)
 	{
 		res = -res;
 	}
-	return res
+	return res;
 }
 
