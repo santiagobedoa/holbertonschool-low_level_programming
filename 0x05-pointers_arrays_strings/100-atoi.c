@@ -30,7 +30,7 @@ int _atoi(char *s)
 			}
 			if (res < INT_MIN)
 			{
-				break;
+				return (-2147483648);
 			}
 		}
 		i++;
