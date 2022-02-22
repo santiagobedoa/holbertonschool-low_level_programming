@@ -12,7 +12,7 @@ int _otoi(char *s)
 	int sign = 1;
 	int r;
 
-	while (s[i] == ' ');
+	while (s[i] == ' ')
 	{
 		i++;
 	}
