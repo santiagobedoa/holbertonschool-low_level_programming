@@ -23,14 +23,17 @@ int _atoi(char *s)
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			res = (res * 10) + (s[i] - '0');
-			if (s[i + 1] < '0' || s[i + 1] > '9')
-			{
-				break;
-			}
-			if (res < INT_MIN)
+			if ((res * 10 + s[1] - '0') < INT_MIN)
 			{
 				return (-2147483648);
+			}
+			else
+			{
+				res = (res * 10) + (s[i] - '0');
+				if (s[i + 1] < '0' || s[i + 1] > '9')
+				{
+					break;
+				}
 			}
 		}
 		i++;
