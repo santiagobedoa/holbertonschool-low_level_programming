@@ -29,7 +29,7 @@ char *cap_string(char *s)
 		{
 			s[i] = toupper(s[i]);
 		}
-		else if (s[i - 1] == 125)
+		else if (s[i - 1] == 125 || s[i - 1] == 9)
 		{
 			s[i] = toupper(s[i]);
 		}
