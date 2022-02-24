@@ -13,7 +13,11 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t')
+		if (i == 0)
+		{
+			s[i] = toupper(s[i]);
+		}
+		else if (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t')
 		{
 			s[i] = toupper(s[i]);
 		}
