@@ -20,14 +20,15 @@ char *rot13(char *s)
 		{
 			*(s + i) += 13;
 		}
-		else if (*(s + i) >= 'n' && *(str + i) <= 'z')
+		else if (*(s + i) >= 'n' && *(s + i) <= 'z')
 		{
 			*(s + i) -= 13;
 		}
-		else if (*(s + i) >= 'N' && *(str + i) <= 'Z')
+		else if (*(s + i) >= 'N' && *(s + i) <= 'Z')
 		{
 			*(s + i) -= 13;
 		}
 	}
 	return (s);
 }
+
