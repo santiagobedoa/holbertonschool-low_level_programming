@@ -6,34 +6,21 @@
  * Return: encoded string
  */
 
-char *leet(char *s)
+char *leet(char *n)
 {
-	int i = 0;
+	int i, j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	while (s[i] != '\0')
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (s[i] == 97 || s[i] == 65)
+		for (j = 0; j < 10; j++)
 		{
-			s[i] = 52;
+			if (n[i] == s1[j])
+			{
+				n[i] = s2[j];
+			}
 		}
-		else if (s[i] == 101 || s[i] == 69)
-		{
-			s[i] = 51;
-		}
-		else if (s[i] == 111 || s[i] == 79)
-		{
-			s[i] = 48;
-		}
-		else if (s[i] == 116 || s[i] == 84)
-		{
-			s[i] = 55;
-		}
-		else if (s[i] == 108 || s[i] == 76)
-		{
-			s[i] = 49;
-		}
-		i++;
 	}
-	return (s);
+	return (n);
 }
-
