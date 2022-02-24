@@ -13,23 +13,23 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (s[i - 1] == 32 || s[i - 1] == '\n' || s[i - 1] == '\t')
+		if (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t')
 		{
 			s[i] = toupper(s[i]);
 		}
-		else if (s[i - 1] == 44 || s[i - 1] == 59 || s[i - 1] == 46)
+		else if (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.')
 		{
 			s[i] = toupper(s[i]);
 		}
-		else if (s[i - 1] == 33 || s[i - 1] == 63 || s[i - 1] == 34)
+		else if (s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"')
 		{
 			s[i] = toupper(s[i]);
 		}
-		else if (s[i - 1] == 40 || s[i - 1] == 41 || s[i - 1] == 123)
+		else if (s[i - 1] == '(' || s[i - 1] == ')')
 		{
 			s[i] = toupper(s[i]);
 		}
-		else if (s[i - 1] == 125 || s[i - 1] == 9)
+		else if (s[i - 1] == '{' || s[i - 1] == '}')
 		{
 			s[i] = toupper(s[i]);
 		}
