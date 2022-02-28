@@ -16,7 +16,7 @@ char *_strchr(char *s, char c)
 	{
 		if (match == c)
 		{
-			break;
+			return (&s[i]);
 		}
 		else
 		{
@@ -24,6 +24,6 @@ char *_strchr(char *s, char c)
 			match = *(s + i);
 		}
 	}
-	return (&s[i]);
+	return (NULL);
 }
 
