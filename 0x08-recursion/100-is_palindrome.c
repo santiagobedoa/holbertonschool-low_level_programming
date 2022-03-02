@@ -20,7 +20,7 @@ int compare_chars(char *s, int i, int j)
 	}
 	if (i < j + 1)
 	{
-		return compare_chars(s, i + 1, j - 1);
+		return (compare_chars(s, i + 1, j - 1));
 	}
 	return (1);
 }
@@ -39,6 +39,6 @@ int is_palindrome(char *s)
 	{
 		return (1);
 	}
-	return compare_chars(s, 0, len - 1);
+	return (compare_chars(s, 0, len - 1));
 }
 
