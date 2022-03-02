@@ -3,6 +3,7 @@
 
 /**
  * compare_chars - checks if two chars are equal
+ * @s: string to be processed
  * @l: char 1
  * @r: char 2
  * Return: 1 if equal, 0 otherwise
