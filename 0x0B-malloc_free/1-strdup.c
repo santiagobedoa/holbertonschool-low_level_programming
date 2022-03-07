@@ -18,6 +18,10 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	arr = malloc(sizeof(char) * strlen(str));
+	if (!str)
+	{
+		return (NULL);
+	}
 	i = 0;
 	while (i <= strlen(str))
 	{
