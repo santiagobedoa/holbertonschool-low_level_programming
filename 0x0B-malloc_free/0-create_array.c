@@ -17,16 +17,16 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	arr = malloc(size * sizeof(char));
+	if (arr == NULL)
+	{
+		return (NULL)
+	}
 	i = 0;
 	while (i <= size)
 	{
 		arr[i] = c;
 		i++;
 	}
-	if (arr)
-	{
-		return (arr);
-	}
-	return (NULL);
+	return (arr);
 }
 
