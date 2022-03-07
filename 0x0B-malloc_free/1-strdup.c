@@ -23,7 +23,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	i = 0;
-	while (i <= strlen(str))
+	while (str[i] != '\0')
 	{
 		arr[i] = str[i];
 		i++;
