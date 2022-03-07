@@ -13,9 +13,13 @@ char *_strdup(char *str)
 	char *arr;
 	unsigned int i;
 
+	if (!str)
+	{
+		return (NULL)
+	}
 	arr = malloc(sizeof(char) * strlen(str));
 	i = 0;
-	while (i < strlen(str))
+	while (i <= strlen(str))
 	{
 		arr[i] = str[i];
 		i++;
