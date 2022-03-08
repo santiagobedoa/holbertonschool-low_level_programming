@@ -28,24 +28,11 @@ int count_words(char *s)
 }
 
 /**
- * free_arg - frees the memory of args
- * @s: string to be freed
- * @i: counter
- * Return: void
- */
-void free_arg(char **s, int i)
-{
-	while (i > 0)
-	{
-		free(s[--i]);
-	}
-	free(s);
-}
-
-/**
  * strtow - splits a string into words
  * @str: string to be splited
  * Return: pointer to an array of strings
+ *
+ * I HAVE TO REMOVE SOME {} BECAUSE OF BETTY
  */
 char **strtow(char *str)
 {
@@ -64,29 +51,27 @@ char **strtow(char *str)
 	for (; *str != '\0' && index < words_in_str;)
 	{
 		if (*str == 32)
-		{
 			str++;
-		}
 		else
 		{
 			found_word = str;
-		for (; *str != 32 && *str != '\0';)
-		{
-			len_word++;
+			for (; *str != 32 && *str != '\0';)
+			{
+				len_word++;
+				str++;
+			}
+			arr[index] = malloc((len_word + 1) * sizeof(char));
+			while (*found_word != 32 && *found_word != '\0')
+			{
+				arr[index][sub_index] = *found_word;
+				found_word++;
+				sub_index++;
+			}
+			arr[index][sub_index] = '\0';
+			index++;
+			sub_index = 0;
+			len_word = 0;
 			str++;
-		}
-		arr[index] = malloc((len_word + 1) * sizeof(char));
-		while (*found_word != 32 && *found_word != '\0')
-		{
-			arr[index][sub_index] = *found_word;
-			found_word++;
-			sub_index++;
-		}
-		arr[index][sub_index] = '\0';
-		index++;
-		sub_index = 0;
-		len_word = 0;
-		str++;
 		}
 	}
 	return (arr);
