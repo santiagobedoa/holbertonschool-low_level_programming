@@ -64,8 +64,11 @@ char **strtow(char *str)
 	for (; *str != '\0' && index < words_in_str;)
 	{
 		if (*str == 32)
+		{
 			str++;
+		}
 		else
+		{
 			found_word = str;
 		for (; *str != 32 && *str != '\0';)
 		{
@@ -84,6 +87,7 @@ char **strtow(char *str)
 		sub_index = 0;
 		len_word = 0;
 		str++;
+		}
 	}
 	return (arr);
 }
