@@ -29,17 +29,17 @@ int count_words(char *s)
 
 /**
  * free_arg - frees the memory of args
- * @string: string to be freed
+ * @s: string to be freed
  * @i: counter
  * Return: void
  */
-void free_arg(char **string, int i)
+void free_arg(char **s, int i)
 {
 	while (i > 0)
 	{
-		free(string[--i]);
+		free(s[--i]);
 	}
-	free(string);
+	free(s);
 }
 
 /**
@@ -49,60 +49,41 @@ void free_arg(char **string, int i)
  */
 char **strtow(char *str)
 {
-	int index = 0;
-	int sub_index = 0;
-	int words_in_str = 0;
-	char **arr;
-	char *found_word;
-	int len_word = 0;
+	int index = 0, sub_index = 0;
+	int words_in_str = 0, len_word = 0;
+	char **arr, *found_word;
 
 	if (str == 0 || *str == 0)
-	{
 		return (NULL);
-	}
 	words_in_str = count_words(str);
 	if (words_in_str == 0)
-	{
 		return (NULL);
-	}
 	arr = malloc((words_in_str + 1) * sizeof(char *));
 	if (arr == 0)
-	{
 		return (NULL);
-	}
 	for (; *str != '\0' && index < words_in_str;)
 	{
 		if (*str == 32)
-		{
 			str++;
-		}
 		else
-		{
 			found_word = str;
-			for (; *str != 32 && *str != '\0';)
-			{
-				len_word++;
-				str++;
-			}
-			arr[index] = malloc((len_word + 1) * sizeof(char));
-			if (arr[index] == 0)
-			{
-				free_arg(arr, index);
-				return (NULL);
-			}
-			while (*found_word != 32 && *found_word != '\0')
-			{
-				arr[index][sub_index] = *found_word;
-				found_word++;
-				sub_index++;
-			}
-			arr[index][sub_index] = '\0';
-			index++;
-			sub_index = 0;
-			len_word = 0;
+		for (; *str != 32 && *str != '\0';)
+		{
+			len_word++;
 			str++;
 		}
+		arr[index] = malloc((len_word + 1) * sizeof(char));
+		while (*found_word != 32 && *found_word != '\0')
+		{
+			arr[index][sub_index] = *found_word;
+			found_word++;
+			sub_index++;
+		}
+		arr[index][sub_index] = '\0';
+		index++;
+		sub_index = 0;
+		len_word = 0;
+		str++;
 	}
 	return (arr);
 }
-
