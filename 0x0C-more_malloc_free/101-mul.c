@@ -56,8 +56,7 @@ int *multiply(char *n1, int l1, char *n2, int l2, int lr)
 	int multiplicand_digit_position;
 	int multiplier_digit_position = l1 - 1;
 	int digit;
-	int carry;
-	int product;
+	int carry, value1, value2, product;
 
 	final_result = calloc(sizeof(int), lr);
 	while (i < l1)
@@ -76,7 +75,9 @@ int *multiply(char *n1, int l1, char *n2, int l2, int lr)
 			{
 				return (NULL);
 			}
-			product = (n1[multiplier_digit_position] - '0') * (n2[multiplicand_digit_position] - '0');
+			value1 = n1[multiplier_digit_position] - '0';
+			value2 = n2[multiplicand_digit_position] - '0';
+			product = value1 * value2;
 			product += carry;
 			mult_result[digit] += product % 10;
 			carry = product / 10;
