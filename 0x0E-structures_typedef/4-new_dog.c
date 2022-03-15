@@ -1,4 +1,4 @@
-#include "main.h"
+#include "dog.h"
 
 /**
  * new_dog - creates a new dog
@@ -7,11 +7,10 @@
  * @owner: owner of the dog
  * Return: pointer to the new dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i;
-	dog_t *dog
+	dog_t *dog;
 
 	if (name == NULL || owner == NULL)
 	{
