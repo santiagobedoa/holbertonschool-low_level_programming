@@ -10,7 +10,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	unsigned int i;
-	dog_t *dog;
+	struct dog_t *dog;
 
 	if (name == NULL || owner == NULL)
 	{
