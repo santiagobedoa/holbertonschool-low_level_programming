@@ -9,7 +9,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i;
+	unsigned int i;
 	dog_t *dog;
 
 	if (name == NULL || owner == NULL)
@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	for (i = 0; i < strlen(name); i++)
 	{
-		dog->name = name[i];
+		dog->name[i] = name[i];
 	}
 	dog->age = age;
 	dog->owner = malloc(strlen(owner) * sizeof(char));
