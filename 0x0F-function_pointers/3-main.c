@@ -8,16 +8,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]);
-	int b = atoi(argv[3]);
+	int a = 0;
+	int b = 0;
 	int (*func)(int, int);
-	int res;
+	int res = 0;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 	func = get_op_func(argv[2]);
 	if (func == NULL)
 	{
