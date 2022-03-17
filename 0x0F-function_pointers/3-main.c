@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	if (func == NULL)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 	res = func(a, b);
 	printf("%d\n", res);
