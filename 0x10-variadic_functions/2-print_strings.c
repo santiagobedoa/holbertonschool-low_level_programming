@@ -29,7 +29,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			string = "(nil)";
 		}
-		printf("%s", va_arg(args, char *));
+		printf("%s", va_arg(string));
 	}
 	for (; i < n; i++)
 	{
