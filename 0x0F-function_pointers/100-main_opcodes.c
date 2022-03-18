@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
 {
 	int i = 0;
 	int num_bytes = 0;
-	char *ptr_main;
 
 	if (argc != 2)
 	{
@@ -24,10 +23,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	ptr_main = &main;
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02hhx", ptr_main[i]);
+		printf("%02hhx", *((char *)main + i));
 		if (i < num_bytes - 1)
 		{
 			printf(" ");
