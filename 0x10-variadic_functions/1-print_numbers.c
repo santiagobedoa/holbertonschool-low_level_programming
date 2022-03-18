@@ -3,7 +3,7 @@
 /**
  * print_numbers - print numbers
  * @separator: is the string to be printed between numbers
- * @n: required argument
+ * @n: number of agruments
  * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
