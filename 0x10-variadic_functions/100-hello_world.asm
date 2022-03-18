@@ -1,18 +1,16 @@
-global _start
-
 section .text
+	global _start
 
 _start:
-	MOV rax, 1
-	MOV rdi, 1
-	MOV rsi, msg
-	MOV rdx, msglength
-	SYSCALL
+	mov edx, len
+	mov ecx, msg
+	mov ebx, 1
+	mov eax, 4	;system call (sys_write)
+	int 0x80	;to call kernel
 
-	MOV rax, 60
-	MOV rdi, 0
-	SYSCALL
+	mov eax, 1	;system call (sys_exit)
+	int 0x080
 
 section .data
-	msg: DB "Hello, World", 0xA
-	msglength: EQU $ - msg
+	msg db "Hello, world", 10
+	len equ $ -msg
