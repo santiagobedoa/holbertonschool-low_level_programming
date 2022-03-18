@@ -9,12 +9,21 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
+	char *sep;
 	va_list args;
-	
+
+	if (separator == NULL)
+	{
+		sep = "";
+	}
+	else
+	{
+		sep = separator;
+	}
 	va_start(args, n);
 	for (; i < n; i++)
 	{
-		printf("%d%s", va_arg(args, int), separator);
+		printf("%d%s", va_arg(args, int), sep);
 	}
 	putchar('\n');
 	va_end(args);
