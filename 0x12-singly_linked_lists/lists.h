@@ -6,7 +6,14 @@
 #include <stdio.h>
 #include <stddef.h>
 
-typedef struct Node {
+/**
+ * struct Node - linked list
+ * @str: a string
+ * @len: len of str
+ * @next: pointer to the next node
+ */
+typedef struct Node
+{
 	char *str;
 	int len;
 	struct Node *next;
@@ -14,5 +21,6 @@ typedef struct Node {
 
 /* PROTOTYPES */
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 #endif
