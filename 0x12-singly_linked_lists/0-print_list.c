@@ -18,7 +18,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[0] (nil)\n")
+			printf("[0] (nil)\n");
 		}
 		len_linked_list++;
 		h = h->next;
