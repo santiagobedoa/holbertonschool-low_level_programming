@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * set_bit - func that sets the value of a bit to zero
+ * clear_bit - func that sets the value of a bit to zero
  * @n: number ot be processed
  * @index: index to set the value
  *
  * Return: 1 if it worked or -1 otherwise
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int size;
 	unsigned long int mask;
