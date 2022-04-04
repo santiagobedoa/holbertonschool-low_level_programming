@@ -24,7 +24,7 @@ void print_binary(unsigned long int n)
 		putchar('1');
 		return;
 	}
-	while (0 <= size)
+	while (size >= 0)
 	{
 		num_in_binary = (n >> size) & 1;
 		if (print_zeros == 1)
