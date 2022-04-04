@@ -8,7 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	signed long int size;
+	unsigned long int size;
 	char num_in_binary;
 	int print_zeros = 0;
 
