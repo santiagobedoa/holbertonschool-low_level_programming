@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content != NULL)
 	{
-		len_content = strlen(text_content);
+		len_content = strlen(text_content) + 1;
 		writen_bits = write(file, text_content, len_content);
 	}
 	if (close(file) == -1 || writen_bits != len_content)
