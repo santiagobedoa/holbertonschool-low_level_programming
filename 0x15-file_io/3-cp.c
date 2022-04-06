@@ -1,26 +1,7 @@
 #include "main.h"
 
 /**
- * close_with_error - close file descriptor with error
- * @fd: file descriptor
- *
- * Return: void
- */
-void close_with_error(int fd)
-{
-	int error;
-
-	error = close(fd);
-	if (error == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-}
-
-
-/**
- * main - Entry point
+ * main - copies the content fo a file to another file
  * @argc: argument count
  * @argv: argument vector
  *
@@ -28,7 +9,7 @@ void close_with_error(int fd)
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, file_from_read, file_to_write;
+	int file_from, file_to, readed_bits, wroten_bits;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -38,32 +19,32 @@ int main(int argc, char *argv[])
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	}
-	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 00664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 00664);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-	while (file_from_read >= 1024)
+	while ((readed_bits = read(file_from, buffer, 1024)) > 0)
 	{
-		file_from_read = read(file_from, buffer, 1024);
-		if (file_from_read == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			close_with_error(file_from);
-			close_with_error(file_to);
-			exit(98);
-		}
-		file_to_write = write(file_to, buffer, file_from_read);
-		if (file_to_write == -1)
+		wroten_bits = write(file_to, buffer, readed_bits);
+		if (wroten_bits == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
-
 	}
-	close_with_error(file_from);
-	close_with_error(file_to);
+	if (readed_bits == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+	}
+	else if (close(file_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
+	}
+	else if (close(file_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
+	}
 	return (0);
 }
