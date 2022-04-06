@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 		file_to_write = write(file_to, buffer, file_from_read);
 		if (file_to_write == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 
