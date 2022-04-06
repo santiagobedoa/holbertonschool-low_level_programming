@@ -13,7 +13,7 @@ void close_with_error(int fd)
 	error = close(fd);
 	if (error == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
