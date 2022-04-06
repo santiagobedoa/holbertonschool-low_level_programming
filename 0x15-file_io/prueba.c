@@ -13,7 +13,7 @@ void close_with_error(int fd)
 	error = close(fd);
 	if (error == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		file_to_write = write(file_to, buffer, file_from_read);
-		if (file_to_write == -1)
+		if (file_to_write)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
