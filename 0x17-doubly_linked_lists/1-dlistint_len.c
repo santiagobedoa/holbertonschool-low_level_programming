@@ -2,7 +2,7 @@
 
 
 /**
- * print_len - function that returns the len of the linked list
+ * dlistint_len - function that returns the len of the linked list
  * @h: head of the linked list
  *
  * Return: len of the linked list
