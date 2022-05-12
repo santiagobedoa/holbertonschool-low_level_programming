@@ -16,13 +16,12 @@ def is_palidrome(num):
 
 
 def find_palindrome():
-    num = 999 * 999
-    while (num):
-        if (is_palidrome(num)):
-            file = open("102-result", "w")
-            file.write(str(num))
-            break
-        num -= 1
+    for i in range(999, 99, -1):
+        for j in range(i, 99, -1):
+            if is_palidrome(i * j):
+                file = open("102-result", "w")
+                file.write(str(i * j))
+                return
 
 
 if __name__ == "__main__":
