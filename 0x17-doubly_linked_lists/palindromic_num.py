@@ -16,12 +16,14 @@ def is_palidrome(num):
 
 
 def find_palindrome():
+    palindromic_nums = []
     for i in range(999, 99, -1):
         for j in range(i, 99, -1):
             if is_palidrome(i * j):
-                file = open("102-result", "w")
-                file.write(str(i * j))
-                return
+                palindromic_nums.append(i * j)
+
+    file = open("102-result", "w")
+    file.write(str(max(palindromic_nums)))
 
 
 if __name__ == "__main__":
