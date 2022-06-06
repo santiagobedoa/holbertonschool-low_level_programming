@@ -2,7 +2,7 @@
 
 /**
  * key_index - returns the index of a key
- * key: string to be mapped
+ * @key: string to be mapped
  * @size: size of the hash array
  *
  * Return: index of the key
