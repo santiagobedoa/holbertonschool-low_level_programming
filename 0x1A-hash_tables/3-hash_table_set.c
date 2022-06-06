@@ -34,8 +34,8 @@ hash_node_t *create_node(const char *key, const char *value)
 
 /**
  * hash_table_set - function that adds an element to the hash table
- * 		    if there is a collision, it will be solved using
- * 		    linked lists.
+ *                  if there is a collision, it will be solved using
+ *                  linked lists.
  * @ht: hash table to be manipulated
  * @key: key (cannot be empty)
  * @value: value associated with the key (can be an empty string)
