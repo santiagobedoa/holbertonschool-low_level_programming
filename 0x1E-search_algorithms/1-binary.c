@@ -3,7 +3,8 @@
 /**
  * print_search - prints an array of integers
  * @array: array to print
- * @size: size of array
+ * @low: lowest index of the array
+ * @high: highest index of the array
  *
  * return: void
  */
